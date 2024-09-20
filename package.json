@@ -1,0 +1,19 @@
+{
+  "name": "react-web-worker",
+  "version": "1.0.0",
+  "description": "web worker manager for react",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GautamJain133/-dk-react-web-worker.git"
+  },
+  "author": "gatuam jain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GautamJain133/-dk-react-web-worker/issues"
+  },
+  "homepage": "https://github.com/GautamJain133/-dk-react-web-worker#readme"
+}
