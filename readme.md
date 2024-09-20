@@ -20,12 +20,11 @@ Install the package using npm:
 
 ```bash
 npm install react-web-worker-agc
+```
 
-Or using yarn:
+## Basic Usage
+```bash
 
-Usage
-
-Basic Usage
 
 import { WorkerPool } from 'react-web-worker-agc';
 
@@ -40,10 +39,11 @@ const result = await pool.runTask(someData);
 
 // When done, terminate all workers
 pool.terminateAll();
+```
 
 
-Using with React Custom Hook
-
+## Using with React Custom Hook
+```bash
 import React, { useState, useEffect } from "react";
 import { WorkerPool } from "react-web-worker-agc";
 
