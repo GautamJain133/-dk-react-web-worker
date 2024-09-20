@@ -66,35 +66,39 @@ function useWorkerPool(workerFile, threadCount) {
 }
 
 export default useWorkerPool;
-
-
-API Reference
-WorkerPool
-
-Constructor
-new WorkerPool(workerScript, maxWorkers = 3, idleTimeout = 120000)
-
-workerScript: The Web Worker script to be used
-maxWorkers: Maximum number of workers in the pool (default: 3)
-idleTimeout: Time in milliseconds before an idle worker is terminated (default: 120000)
-
-
-
-Methods
-runTask(data): Submits a task to be processed by a Web Worker
-startGarbageCollector(): Starts the garbage collector to clean up idle workers
-stopGarbageCollector(): Stops the garbage collector
-terminateAll(): Terminates all workers and clears the poo
-
-Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-License
-This project is licensed under the ISC License.
-
-Support
-If you encounter any problems or have any questions, please open an issue on the GitHub repository.
-
-Author
-Gautam Jain
 ```
+
+## API Reference
+
+- WorkerPool
+
+## Constructor
+
+- new WorkerPool(workerScript, maxWorkers = 3, idleTimeout = 120000)
+
+- workerScript: The Web Worker script to be used
+- maxWorkers: Maximum number of workers in the pool (default: 3)
+- idleTimeout: Time in milliseconds before an idle worker is terminated (default: 120000)
+
+## Methods
+
+- runTask(data): Submits a task to be processed by a Web Worker
+- startGarbageCollector(): Starts the garbage collector to clean up idle workers
+- stopGarbageCollector(): Stops the garbage collector
+- terminateAll(): Terminates all workers and clears the poo
+
+## Contributing
+
+- Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+- This project is licensed under the ISC License.
+
+## Support
+
+- If you encounter any problems or have any questions, please open an issue on the GitHub repository.
+
+## Author
+
+Gautam Jain
