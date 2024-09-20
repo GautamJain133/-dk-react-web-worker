@@ -16,5 +16,11 @@
   "bugs": {
     "url": "https://github.com/GautamJain133/-dk-react-web-worker/issues"
   },
-  "homepage": "https://github.com/GautamJain133/-dk-react-web-worker#readme"
+  "homepage": "https://github.com/GautamJain133/-dk-react-web-worker#readme",
+  "keywords": [
+    "react-web-worker",
+    "workerpool",
+    "automatic-garbage-collector",
+    "worker-manager"
+  ]
 }
