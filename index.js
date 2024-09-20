@@ -1,4 +1,4 @@
-class WorkerPool {
+ export class WorkerPool {
   /**
    *
    * @param {*} workerScript

@@ -1,8 +1,9 @@
 {
-  "name": "react-web-worker",
+  "name": "react-web-worker-gj",
   "version": "1.0.0",
   "description": "web worker manager for react",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
