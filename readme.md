@@ -1,26 +1,33 @@
-# WorkerPool
+# react-web-worker-agc
 
-WorkerPool is a JavaScript class that manages a pool of Web Workers, allowing for efficient distribution and execution of tasks across multiple threads.
+A powerful and efficient Web Worker manager for React applications.
+
+## Description
+
+`react-web-worker-agc` is a npm package that provides a robust solution for managing Web Workers in React applications. It offers a `WorkerPool` class that allows you to create, manage, and optimize the use of Web Workers, enabling better performance for CPU-intensive tasks in your React applications.
 
 ## Features
 
-- Dynamic creation and management of Web Workers
-- Task queuing and distribution
-- Automatic garbage collection for idle workers
-- Error handling for worker tasks
-- Customizable pool size and idle timeout
+- Create and manage a pool of Web Workers
+- Automatic task queuing and distribution
+- Idle worker termination for optimized resource usage
+- Easy integration with React components through a custom hook
+- Garbage collection to clean up idle workers
 
 ## Installation
 
-To use WorkerPool in your project, you can simply copy the `WorkerPool.js` file into your project directory.
+Install the package using npm:
 
 ```bash
-cp WorkerPool.js /path/to/your/project/
+npm install react-web-worker-agc
+
+Or using yarn:
 
 Usage
-Here's a basic example of how to use WorkerPool:
 
-import WorkerPool from './WorkerPool.js';
+Basic Usage
+
+import { WorkerPool } from 'react-web-worker-agc';
 
 // Create a WorkerPool instance
 const pool = new WorkerPool(YourWorkerScript, 5, 300000);
@@ -29,22 +36,16 @@ const pool = new WorkerPool(YourWorkerScript, 5, 300000);
 pool.startGarbageCollector();
 
 // Run a task
-try {
-  const result = await pool.runTask(someData);
-  console.log(result);
-} catch (error) {
-  console.error('Task failed:', error);
-}
+const result = await pool.runTask(someData);
 
-// When you're done with the pool, terminate all workers
+// When done, terminate all workers
 pool.terminateAll();
 
-Using with React (Custom Hook)
-You can create a custom React hook to use WorkerPool in your React applications:
 
+Using with React Custom Hook
 
 import React, { useState, useEffect } from "react";
-import WorkerPool from "./WorkerPool.js";
+import { WorkerPool } from "react-web-worker-agc";
 
 function useWorkerPool(workerFile, threadCount) {
   const [pool, setPool] = useState(null);
@@ -65,3 +66,35 @@ function useWorkerPool(workerFile, threadCount) {
 }
 
 export default useWorkerPool;
+
+
+API Reference
+WorkerPool
+
+Constructor
+new WorkerPool(workerScript, maxWorkers = 3, idleTimeout = 120000)
+
+workerScript: The Web Worker script to be used
+maxWorkers: Maximum number of workers in the pool (default: 3)
+idleTimeout: Time in milliseconds before an idle worker is terminated (default: 120000)
+
+
+
+Methods
+runTask(data): Submits a task to be processed by a Web Worker
+startGarbageCollector(): Starts the garbage collector to clean up idle workers
+stopGarbageCollector(): Stops the garbage collector
+terminateAll(): Terminates all workers and clears the poo
+
+Contributing
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+License
+This project is licensed under the ISC License.
+
+Support
+If you encounter any problems or have any questions, please open an issue on the GitHub repository.
+
+Author
+Gautam Jain
+```
