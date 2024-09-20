@@ -1,6 +1,6 @@
 {
   "name": "react-web-worker-agc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "web worker manager for react",
   "main": "index.js",
   "type": "module",
